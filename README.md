@@ -21,7 +21,7 @@ restapi - postman
 ## step 6: paste code and run the file which has a main method
 
 ## razor pay
-step 1: create a account in razor pay
-step 2: change the mode to test mode (search > account settings > website and app settings > api keys > switch to test mode)
-step 3: generate api keys and download the csv
+## step 1: create a account in razor pay
+## step 2: change the mode to test mode (search > account settings > website and app settings > api keys > switch to test mode)
+## step 3: generate api keys and download the csv
 
