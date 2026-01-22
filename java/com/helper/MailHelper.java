@@ -24,7 +24,7 @@ public class MailHelper {
 		MimeMessage message = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
 		try {
-			helper.setFrom("mithunofl@gmail.com", "team lead");
+			helper.setFrom("your-email@gmail.com", "team lead");
 
 			Context context = new Context();
 			context.setVariable("student", student);
@@ -43,3 +43,4 @@ public class MailHelper {
 	}
 
 }
+
