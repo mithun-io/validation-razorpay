@@ -25,17 +25,15 @@ public class MailHelper {
 		MimeMessageHelper helper = new MimeMessageHelper(message);
 		try {
 			helper.setFrom("your-email@gmail.com", "team lead");
-
+			helper.setTo(student.getEmail());
+			helper.setSubject("registration successful");
+			
 			Context context = new Context();
 			context.setVariable("student", student);
 
 			String text = engine.process("email-template.html", context);
-
-			helper.setText(text, true);
-
-			helper.setSubject("registration successful");
-			helper.setTo(student.getEmail());
-		
+			helper.setText(text, true);	
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,4 +41,5 @@ public class MailHelper {
 	}
 
 }
+
 
