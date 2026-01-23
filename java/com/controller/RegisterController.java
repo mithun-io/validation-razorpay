@@ -26,24 +26,24 @@ public class RegisterController {
 		return "register.html";
 	}
 
-	@PostMapping("/register")
-	public String register(@Valid Student student, BindingResult result, ModelMap map) {
-		return service.register(student, result, map);
-	}
-
 	@GetMapping("/payment")
 	public String payment() {
 		return "payment.html";
-	}
-
-	@PostMapping("/payment")
-	public String payment(@RequestParam int amount, ModelMap map) throws Exception {
-		return service.payment(amount, map);
 	}
 
 	@PostMapping("/success")
 	@ResponseBody
 	public String success() {
 		return "payment success!!";
+	}
+
+	@PostMapping("/register")
+	public String register(@Valid Student student, BindingResult result, ModelMap map) {
+		return service.register(student, result, map);
+	}
+
+	@PostMapping("/payment")
+	public String payment(@RequestParam int amount, ModelMap map) throws Exception {
+		return service.payment(amount, map);
 	}
 }
